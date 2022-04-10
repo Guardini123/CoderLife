@@ -182,6 +182,7 @@ public class Character : MonoBehaviour
         pos.y = transform.position.y;
 
         transform.position = Vector3.MoveTowards(transform.position, pos, Time.deltaTime * SpeedMultiplyer * speedMult);
+        transform.LookAt(pos);
 	}
 
 
