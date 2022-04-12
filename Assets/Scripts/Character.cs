@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public class Character : MonoBehaviour
 {
@@ -125,7 +126,7 @@ public class Character : MonoBehaviour
     public State RandomMoveState;
     public State DeadState;
 
-    [Header("Actual state")]
+    [Header("Current states")]
     public State CurrentState;
 
 
@@ -182,7 +183,6 @@ public class Character : MonoBehaviour
         pos.y = transform.position.y;
 
         transform.position = Vector3.MoveTowards(transform.position, pos, Time.deltaTime * SpeedMultiplyer * speedMult);
-        transform.LookAt(pos);
 	}
 
 
