@@ -19,6 +19,6 @@ public class CurrentStateNameDisplay : MonoBehaviour
 
 	private void Update()
 	{
-		_curStateNameTMPText.text = _character.CurrentState.GetType().ToString();
+		_curStateNameTMPText.text = _character.CurrentState.GetType().ToString().Replace("State", "");
 	}
 }
